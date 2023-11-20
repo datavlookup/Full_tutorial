@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World </h1>
+
+    <p>This is my first page</p>
+
+    <p>My name is {{ first_name }}</p>
+
+    <p>{{ stuff|safe}}</p>
+
+    <h3>Favorite Pizza </h3>
+    {% for item in favorite_pizza %}<br>
+    {{ item }}
+    {% endfor %}
+    <br>
+    <p>{{ favorite_pizza.0 }}</p>
+</body>
+</html>
