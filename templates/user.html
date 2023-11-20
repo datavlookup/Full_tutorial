@@ -6,7 +6,10 @@
     <title>User</title>
 </head>
 <body>
+    {% extends 'base.html' %}
+
+    {% block content %}
     <h1>Hello {{ user_name |  lower }}</h1><br>
-    
+    {% endblock %}
 </body>
 </html>
