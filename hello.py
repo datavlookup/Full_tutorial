@@ -2,7 +2,7 @@ from flask import *
 from flask_wtf import FlaskForm
 from wtforms import StringField,SubmitField
 from wtforms.validators import DataRequired
-
+from flask import flash
 
 app = Flask(__name__, template_folder='templates')
 # Create Key 
@@ -21,6 +21,7 @@ def name():
     if form.validate_on_submit():
         name = form.name.data
         form.name.data = ''
+        flash('Form Submited Successfully')
         
     return render_template('name.html', 
                            name=name,
@@ -32,7 +33,7 @@ def index():
     first_name = 'Orhan'
     stuff = 'This is <strong> bold </strong> '
     favorite_pizza = ['paperroni', 'mushrooms', 'Cheese', 'pizza', 'Salami']
-
+    
     return render_template('index.html', first_name=first_name, stuff=stuff, favorite_pizza=favorite_pizza)
 
 @app.route('/user/<name>')
