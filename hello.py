@@ -3,6 +3,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField,SubmitField
 from wtforms.validators import DataRequired
 from flask import flash
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__, template_folder='templates')
 # Create Key 
