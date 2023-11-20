@@ -1,9 +1,10 @@
-from flask import *
+from flask import url_for, redirect, render_template,Flask
 from flask_wtf import FlaskForm
 from wtforms import StringField,SubmitField
 from wtforms.validators import DataRequired
 from flask import flash
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 app = Flask(__name__, template_folder='templates')
 # Create Key 
